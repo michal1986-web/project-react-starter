@@ -17,7 +17,7 @@ class Card extends React.Component {
         </h3>
         
       </section>
-    )
+    );
   }
 }
 

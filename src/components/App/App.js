@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './App.scss';
 import List from '../List/List.js'; // Pobiera właściwości z folderu wyżej, potem wchodzi do folderu List i pobiera plik List.js
-import {pageContents, listData} from '../../data/dataStore'; // ..jeden folder ..drugi folder do góry, a potem folder data i plik data
+import {listData} from '../../data/dataStore'; // ..jeden folder ..drugi folder do góry, a potem folder data i plik data
 
 const App = () => (
   <main className={styles.component}>
@@ -12,7 +12,7 @@ const App = () => (
     <List {...listData} />
 
   </main>
-)
+);
 
 /*<List
 title={listData.title}

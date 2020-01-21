@@ -11,12 +11,12 @@ const Hero = props => (
     <img className={styles.image} src={props.imageUrl}></img> 
     
   </header>
-)
+);
 
 Hero.propTypes = {
   titleText: PropTypes.node.isRequired,
   imageUrl: PropTypes.string.isRequired, // image zmiana w kodzie
-}
+};
 
 // <h2 className={styles.title}>{ReactHtmlParser(props.titleText)}</h2> - Parsowanie kodu, po zainstalowaniu 'npm install --save react-html-parser', zmienia kod html na poprawny
 
