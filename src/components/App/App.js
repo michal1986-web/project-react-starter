@@ -1,19 +1,25 @@
 import React from 'react';
 import styles from './App.scss';
 import List from '../List/List.js'; // Pobiera właściwości z folderu wyżej, potem wchodzi do folderu List i pobiera plik List.js
+import {pageContents, listData} from '../../data/dataStore'; // ..jeden folder ..drugi folder do góry, a potem folder data i plik data
 
 const App = () => (
   <main className={styles.component}>
 
     <h1 className={styles.title}>My first React app</h1>
     <h2 className={styles.subtitle}>Hello world!</h2>
-    
-    <List title={['Hi, how are you ', <sup key='1'>Michael?</sup>]} image={"http://uploads.kodilla.com/bootcamp/fer/11.react/space.png"} >
-      <p>I,m fine, and you?</p>
-    </List>
+
+    <List {...listData} />
 
   </main>
 )
+
+/*<List
+title={listData.title}
+description={listData.description}
+image={listData.image}
+columns={listData.columns}
+/>*/
 
 //Zaczynamy od nawiasów klamrowych { }, ponieważ przechodzimy z kodu JSX do zwykłego JS. W tych nawiasach umieszczamy tablicę, której pierwszym elementem jest tekst, a drugim – kod JSX!
 

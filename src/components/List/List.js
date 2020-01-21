@@ -1,20 +1,28 @@
 import React from 'react';
-import styles from './List.scss'; // Pobiera style ze swojego katalogu
-import Hero from '../Hero/Hero.js'; // Pobiera właściwości z folderu wyżej, potem wchodzi do folderu Hero i pobiera plik Hero.js
-import PropTypes from 'prop-types'; // Zanim będziemy mogli wdrożyć sprawdzanie typów wartości, musimy zainstalować paczkę prop-types – wykonaj w terminalu komendę: npm install --save prop-types
+import styles from './List.scss'; 
+import Hero from '../Hero/Hero.js'; 
+import PropTypes from 'prop-types'; 
 import Column from '../Column/Column.js';
+import {settings} from '../../data/dataStore';
+import ReactHtmlParser from 'react-html-parser';
 
 class List extends React.Component {
 
+  state = {
+    columns: this.props.columns || [],
+  }
+
   static propTypes = { // statyczną właściwość tej klasy - List.propTypes
     title: PropTypes.node.isRequired,
-    children: PropTypes.node, 
+    //children: PropTypes.node, // delated 11.5
     imageUrl: PropTypes.string, // string = tekst
-    titleCol: PropTypes.string, // string = tytuł column
+    description: PropTypes.node,
+    columns: PropTypes.array,
   }  
 
   static defaultProps = {
-    children: <p>I can do all the things!!!</p>,
+    // children: <p>I can do all the things!!!</p>, // delated 11.5
+    description: settings.defaultListDescription,
   }
 
   render() {
@@ -24,13 +32,15 @@ class List extends React.Component {
         <Hero titleText={this.props.title} imageUrl={this.props.image} />
 
         <div className={styles.description}>
-          {this.props.children}
+          {ReactHtmlParser(this.props.description)}
         </div>
 
         <div className={styles.columns}>
-          <Column titleCol={'Column 1'} />
-          <Column titleCol={'Column 2'} />
-          <Column titleCol={'Column 3'} />
+
+          {this.state.columns.map(({key, ...columnProps}) => (
+            <Column key={key} {...columnProps} />
+          ))}
+          
         </div>
 
       </section>
