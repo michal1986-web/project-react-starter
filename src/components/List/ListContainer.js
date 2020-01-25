@@ -9,6 +9,6 @@ const mapStateToProps = (state, props) => ({
 
 /*const mapStateToProps = state => ({
   columns: state.columns,
-});*/
+});*/ 
 
 export default connect(mapStateToProps)(List);
