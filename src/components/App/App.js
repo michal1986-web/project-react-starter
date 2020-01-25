@@ -1,32 +1,35 @@
 import React from 'react';
 import styles from './App.scss';
+import PropTypes from 'prop-types';
 import List from '../List/List.js'; // Pobiera właściwości z folderu wyżej, potem wchodzi do folderu List i pobiera plik List.js
-import {listData} from '../../data/dataStore'; // ..jeden folder ..drugi folder do góry, a potem folder data i plik data
+//import {listData} from '../../data/dataStore'; // ..jeden folder ..drugi folder do góry, a potem folder data i plik data
 
-const App = () => (
-  <main className={styles.component}>
+class App extends React.Component {
 
-    <h1 className={styles.title}>My first React app</h1>
-    <h2 className={styles.subtitle}>Hello world!</h2>
+  static propTypes = {
+    title: PropTypes.node,
+    subtitle: PropTypes.node,
+    lists: PropTypes.array,
+  }
 
-    <List {...listData} />
+  render() {
+    const {title, subtitle, lists} = this.props;
+    return (
+      <main className={styles.component}>
+        <h1 className={styles.title}>{title}</h1>
+        <h2 className={styles.subtitle}>{subtitle}</h2>
 
-  </main>
-);
+        {/*
+        <List {...listData} />
+        */}
 
-/*<List
-title={listData.title}
-description={listData.description}
-image={listData.image}
-columns={listData.columns}
-/>*/
+        {lists.map(listData => (
+          <List key={listData.id} {...listData} />
+        ))}
 
-//Zaczynamy od nawiasów klamrowych { }, ponieważ przechodzimy z kodu JSX do zwykłego JS. W tych nawiasach umieszczamy tablicę, której pierwszym elementem jest tekst, a drugim – kod JSX!
-
-// <List title='Things to do' /> Właśnie w ten sposób ustawia się propsy komponentu.
-
-// const App = () => (Jak widzisz, różnią się tylko tym, co jest dookoła kodu JSX. Jeśli to wszystko, czego będzie potrzebował nasz komponent, możemy śmiało używać komponentu funkcyjnego.
-
-// defaul - Dzięki niemu, importując App w pliku index.js, możemy pominąć nawiasy klamrowe, czyli nie musimy pisać import {App} from '...';, tak jak do tej pory to robiliśmy
+      </main>
+    );
+  }
+}
 
 export default App;
