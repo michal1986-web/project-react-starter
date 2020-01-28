@@ -1,11 +1,11 @@
 import React from 'react';
 import Container from '../Container/Container';
-import Hero from '../Hero/Hero';
 import PropTypes from 'prop-types';
+import Hero from '../Hero/Hero';
 import {settings} from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 
-const Info = ({titleText, imageUrl, contentText}) => (
+const Faq = ({titleText, imageUrl, contentText}) => (
   <Container>
 
     <Hero titleText={titleText} imageUrl={imageUrl} />
@@ -14,16 +14,16 @@ const Info = ({titleText, imageUrl, contentText}) => (
   </Container>
 );
 
-Info.propTypes = {
-  titleText: PropTypes.string.isRequired,
+Faq.propTypes = {
+  titleText: PropTypes.node.isRequired,
   imageUrl: PropTypes.node.isRequired,
   contentText: PropTypes.string.isRequired,
 };
 
-Info.defaultProps = {
-  titleText: settings.infoContent.title,
-  imageUrl: settings.infoContent.image,
-  contentText: settings.infoContent.text,
+Faq.defaultProps = {
+  titleText: settings.FaqContent.title,
+  imageUrl: settings.FaqContent.image,
+  contentText: settings.FaqContent.text,
 };
 
-export default Info;
+export default Faq;

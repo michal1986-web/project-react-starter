@@ -48,8 +48,8 @@ class List extends React.Component {
   render() {
     const {title, image, description, columns, addColumn} = this.props;
     return (
-      <section className={styles.component}>
-        <Container>
+      <Container>
+        <section className={styles.component}>
 
           <Hero titleText={title} imageUrl={image} />
 
@@ -62,13 +62,13 @@ class List extends React.Component {
               <Column key={columnData.id} {...columnData} />
             ))}
           </div>
-          
+            
           <div className={styles.creator}>
             <Creator text={settings.columnCreatorText} action={addColumn}/>
           </div>
 
-        </Container>
-      </section>
+        </section>
+      </Container>
     );
     // console.log('addColumn:', addColumn);
   }

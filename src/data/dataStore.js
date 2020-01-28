@@ -12,6 +12,25 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+  navMenu: {
+    logoIcon: 'cat',
+    toHomeUrl: '/',
+    toInfoUrl: '/Info',
+    toFaqUrl: '/Faq',
+    homeHeader: 'Home',
+    infoHeader: 'Info',
+    FaqHeader: 'FAQ',
+  },
+  infoContent: {
+    title: 'Info',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet nulla vitae mi iaculis, vel tristique enim iaculis. Morbi dignissim turpis purus, sed tempor dui efficitur et. Mauris dignissim porta luctus. Praesent a mi nunc. Aenean vestibulum justo cursus, fringilla quam id, egestas nunc. Donec a risus non odio aliquam aliquam sit amet vel felis. Aliquam ultrices ultricies consequat. Praesent egestas fringilla massa, eu auctor orci imperdiet a. Sed ut blandit sem. Sed nunc quam, varius in tortor sit amet, placerat vulputate sem. Donec tortor justo, imperdiet vitae magna sed, facilisis lacinia massa. Fusce vel erat scelerisque, elementum elit nec, volutpat dolor. Curabitur finibus enim sit amet purus bibendum eleifend. Donec maximus, ipsum in facilisis posuere, metus ex dignissim urna, ac aliquam leo mi quis augue. Mauris convallis sem eu dui facilisis vehicula. Nulla non elit sed arcu aliquet vulputate. Suspendisse quis mattis metus, hendrerit tristique sapien. Quisque augue elit, auctor eget lectus eget, tristique vestibulum turpis. Curabitur fringilla in nulla quis aliquam.',
+  },
+  FaqContent: {
+    title: 'Faq',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquet nulla vitae mi iaculis, vel tristique enim iaculis. Morbi dignissim turpis purus, sed tempor dui efficitur et. Mauris dignissim porta luctus. Praesent a mi nunc. Aenean vestibulum justo cursus, fringilla quam id, egestas nunc. Donec a risus non odio aliquam aliquam sit amet vel felis. Aliquam ultrices ultricies consequat. Praesent egestas fringilla massa, eu auctor orci imperdiet a. Sed ut blandit sem. Sed nunc quam, varius in tortor sit amet, placerat vulputate sem. Donec tortor justo, imperdiet vitae magna sed, facilisis lacinia massa. Fusce vel erat scelerisque, elementum elit nec, volutpat dolor. Curabitur finibus enim sit amet purus bibendum eleifend. Donec maximus, ipsum in facilisis posuere, metus ex dignissim urna, ac aliquam leo mi quis augue. Mauris convallis sem eu dui facilisis vehicula. Nulla non elit sed arcu aliquet vulputate. Suspendisse quis mattis metus, hendrerit tristique sapien. Quisque augue elit, auctor eget lectus eget, tristique vestibulum turpis. Curabitur fringilla in nulla quis aliquam.',
+  },
 };
 
 export const pageContents = {
