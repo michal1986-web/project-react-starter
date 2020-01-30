@@ -28,6 +28,7 @@
     "react-html-parser": "^2.0.2",
     "react-redux": "^7.1.3",
     "react-router-dom": "^5.1.2",
+    "react-router-transition": "^1.4.0",
     "redux": "^4.0.5",
     "shortid": "^2.2.15"
   },
@@ -53,5 +54,13 @@
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.1.14",
     "webpack-merge": "^4.2.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michal1986-web/project-react-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/michal1986-web/project-react-starter/issues"
+  },
+  "homepage": "https://github.com/michal1986-web/project-react-starter#readme"
 }

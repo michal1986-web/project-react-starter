@@ -1,11 +1,12 @@
 import React from 'react';
 import {NavLink, Link} from 'react-router-dom';
 import styles from './Header.scss';
-import Container from '../Container/Container';
-import Icon from '../Icon/Icon';
-import {settings} from '../../data/dataStore';
+import Container from '../Container/Container.js';
+import Icon from '../Icon/Icon.js';
+import {settings} from '../../data/dataStore.js';
 import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
+import Search from '../Search/SearchContainer.js';
 
 class Header extends React.Component {
 
@@ -40,6 +41,8 @@ class Header extends React.Component {
             <Link to={toHomeUrl} className={styles.logo}>
               <Icon name={logoIcon} />
             </Link>
+
+            <Search />
 
             <nav>
               <NavLink exact to={toHomeUrl} activeClassName='active'>{ReactHtmlParser(homeHeader)}</NavLink>
